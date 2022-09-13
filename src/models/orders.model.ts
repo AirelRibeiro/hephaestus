@@ -4,3 +4,7 @@ import connection from './connection';
 
 interface OrderWithRow extends Order, RowDataPacket{}
 
+const OrdersModel = {
+};
+
+export default OrdersModel;
