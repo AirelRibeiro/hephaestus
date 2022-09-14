@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
+import Joi from 'joi';
 
 const validLoginFields = (req: Request, res: Response, next: NextFunction) => {
   if (!req.body.username) return res.status(400).json({ message: '"username" is required' });
