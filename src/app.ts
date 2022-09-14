@@ -1,6 +1,6 @@
 import express from 'express';
 import UsersController from './controllers/users.controller';
-import validLoginFields from './middlewares/loginValidation';
+import { validLoginFields } from './middlewares/userValidation';
 import ordersRoute from './routes/orders.routes';
 import productsRoute from './routes/products.routes';
 import usersRoute from './routes/users.routes';

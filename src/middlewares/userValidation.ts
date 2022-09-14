@@ -6,4 +6,11 @@ const validLoginFields = (req: Request, res: Response, next: NextFunction) => {
   next();
 };
 
-export default validLoginFields;
+const validUserFields = (req: Request, res: Response, next: NextFunction) => {
+
+};
+
+export {
+  validLoginFields,
+  validUserFields,
+};
