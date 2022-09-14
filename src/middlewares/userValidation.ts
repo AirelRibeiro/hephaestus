@@ -31,7 +31,12 @@ const fieldsValidations = Joi.object({
 });
 
 const validUserFields = (req: Request, res: Response, next: NextFunction) => {
-
+  const fields = fieldsValidations.validate(req.body);
+  if (fields.error) {
+    const error: string = fields.error.details[0].message;
+    return res.status(Number(error.split('|')[1])).json({ message: error.split('|')[0] });
+  }
+  return next();
 };
 
 export {
