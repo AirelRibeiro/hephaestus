@@ -1,8 +1,6 @@
-import { ResultSetHeader } from 'mysql2/promise';
+import { ResultSetHeader, RowDataPacket } from 'mysql2/promise';
 import connection from './connection';
 import User from '../interfaces/user.interface';
-
-// interface UserWithRow extends User, RowDataPacket{}
 
 const UsersModel = {
   create: async ({ username, classe, level, password }: User): Promise<number> => {
@@ -11,6 +9,15 @@ const UsersModel = {
     const [{ insertId }] = await connection
       .execute<ResultSetHeader>(query, [username, classe, level, password]);
     return insertId;
+  },
+
+  login: async (username: string, password: string): Promise<User> => {
+    const query = `
+    SELECT * FROM Trybesmith.Users AS users
+    WHERE users.username = ? AND users.password = ?`;
+    const [user] = await connection
+      .execute<RowDataPacket[]>(query, [username, password]);
+    return user[0] as User;
   },
 };
 
