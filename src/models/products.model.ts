@@ -16,7 +16,6 @@ const ProductsModel = {
       .execute<ProductWithRow[]>('SELECT * FROM Trybesmith.Products;');
     return result;
   },
-
 };
 
 export default ProductsModel;
