@@ -10,11 +10,13 @@ const validLoginFields = (req: Request, res: Response, next: NextFunction) => {
 const fieldsValidations = Joi.object({
   username: Joi.string().required().min(3).messages({
     'any.required': '"username" is required|400',
+    'string.empty': '"username" is required|400',
     'string.base': '"username" must be a string|422',
     'string.min': '"username" length must be at least 3 characters long|422',
   }),
   classe: Joi.string().required().min(3).messages({
     'any.required': '"classe" is required|400',
+    'string.empty': '"classe" is required|400',
     'string.base': '"classe" must be a string|422',
     'string.min': '"classe" length must be at least 3 characters long|422',
   }),
@@ -25,6 +27,7 @@ const fieldsValidations = Joi.object({
   }),
   password: Joi.string().required().min(8).messages({
     'any.required': '"password" is required|400',
+    'string.empty': '"password" is required|400',
     'string.base': '"password" must be a string|422',
     'string.min': '"password" length must be at least 8 characters long|422',
   }),
