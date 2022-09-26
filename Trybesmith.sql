@@ -26,17 +26,33 @@ CREATE TABLE Trybesmith.Products (
 INSERT INTO
   Trybesmith.Users (username, classe, level, password)
 VALUES
-  ("reigal", "Guerreiro", 10, "1dragaonoceu");
+  ("antaro", "Mago", 30, "1dragonlord");
 
 INSERT INTO
   Trybesmith.Users (username, classe, level, password)
 VALUES
-  ("vyrion", "Inventor", 8, "pagandodividas");
+  ("cailin", "Guerreio", 10, "salveorei");
 
 INSERT INTO
   Trybesmith.Users (username, classe, level, password)
 VALUES
-  ("yraa", "Ladina", 5, "valarmorg");
+  ("suzzene", "Fae", 50, "lilith123");
+
+INSERT INTO
+  Trybesmith.Users (username, classe, level, password)
+VALUES
+  ("gorlon", "Caçador", 30, "deersteak");
+
+INSERT INTO
+  Trybesmith.Users (username, classe, level, password)
+VALUES
+  ("freud", "Médico", 45, "inconsciente");
+
+INSERT INTO
+  Trybesmith.Users (username, classe, level, password)
+VALUES
+  ("alixia", "Fae", 46, "savegodpa");
+
 
 INSERT INTO
   Trybesmith.Orders (userId)
@@ -46,7 +62,7 @@ VALUES
 INSERT INTO
   Trybesmith.Orders (userId)
 VALUES
-  (3);
+  (4);
 
 INSERT INTO
   Trybesmith.Orders (userId)
@@ -54,30 +70,35 @@ VALUES
   (2);
 
 INSERT INTO
+  Trybesmith.Orders (userId)
+VALUES
+  (6);
+
+INSERT INTO
   Trybesmith.Products (name, amount)
 VALUES
-  ("Espada curta", "10 peças de ouro");
+  ("Adaga Mão Esquerda", "100 peças de ouro");
 
 INSERT INTO
   Trybesmith.Products (name, amount, orderId)
 VALUES
   (
-    "Escudo desnecessariamente grande",
+    "Cutelo",
     "20 peças de ouro",
-    1
+    2
   );
 
 INSERT INTO
   Trybesmith.Products (name, amount, orderId)
 VALUES
-  ("Adaga de Aço Valírico", "1 peça de ouro", 2);
+  ("Morningstar", "50 peças de ouro", 2);
 
 INSERT INTO
   Trybesmith.Products (name, amount, orderId)
 VALUES
-  ("Colar de fogo", "1 peça de ouro", 2);
+  ("Percemaille", "55 peças de ouro", 2);
 
 INSERT INTO
   Trybesmith.Products (name, amount, orderId)
 VALUES
-  ("Engenhoca aleatória", "15 peças de ouro", 3);
+  ("Cajado de três círculos feito de galena e quartzo", "150 peças de ouro", 4);
