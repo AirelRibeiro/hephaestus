@@ -66,3 +66,4 @@ O <strong>Express.js</strong>, framework para <strong>Node.js</strong>, ofereceu
 ```
   http://localhost:3000
 ```
+**Obs:** _Como o browser só poderá ser usado para rotas **GET**, se quiser realizar as requisições **POST**, você precisará de uma plataforma de API, como o Postman_
